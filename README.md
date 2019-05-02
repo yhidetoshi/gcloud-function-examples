@@ -22,7 +22,9 @@ Google cloudのcloud-functionにGo1.11ランタイムでデプロイする
 
 - デプロイ方法
   - gcloudコマンド
-    - `gcloud functions deploy natureRemo --entry-point NatureRemo --runtime go111 --trigger-resource <TOPIC> --memory 128 --trigger-event google.pubsub.topic.publish --project <PROJECTID> --region asia-northeast1 --set-env-vars MKRKEY=<MKRKEY>,REMOTOKEN=<REMOTOKEN>`
+    - `$ cd ./natureRemo`
+    - go.modを最初に生成する場合: `go mod init github.com/yhidetoshi/gcloud-function-examples/natureRemo`
+    - `$ gcloud functions deploy natureRemo --entry-point NatureRemo --runtime go111 --trigger-resource <TOPIC> --memory 128 --trigger-event google.pubsub.topic.publish --project <PROJECTID> --region asia-northeast1 --set-env-vars MKRKEY=<MKRKEY>,REMOTOKEN=<REMOTOKEN>`
 
 - 環境変数
   - MKRKEY: mackerel_api_keyをセット

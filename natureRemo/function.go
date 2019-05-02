@@ -116,11 +116,7 @@ func PostValuesToMackerel(tem float64, hum float64, ill float64, nowTime time.Ti
 	}
 }
 
-
-
 func NatureRemo(ctx context.Context, m PubSubMessage) error {
-//func Hello(w http.ResponseWriter, r *http.Request) {
-//func Handler(ctx context.Context) {
 
 	jst := time.FixedZone(timezone, offset)
 	nowTime := time.Now().In(jst)

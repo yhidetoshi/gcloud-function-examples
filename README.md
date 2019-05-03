@@ -29,3 +29,17 @@ Google cloudのcloud-functionにGo1.11ランタイムでデプロイする
 - 環境変数
   - MKRKEY: mackerel_api_keyをセット
   - REMOTOKEN: natureRemoトークン
+
+
+## http-helloディレクトリのREADME
+- `$ export GO111MODULE=on`
+
+- `$ go mod init github.com/yhidetoshi/gcloud-function-examples/http-hello`
+
+- `$ gcloud functions deploy Hello --runtime go111 --trigger-http`
+
+--> Endpointが出力される
+
+- `$ curl https://us-central1-<GCP_PROJECT_ID>.cloudfunctions.net/Hello`
+  > Hello World
+

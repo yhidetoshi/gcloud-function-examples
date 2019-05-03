@@ -36,10 +36,10 @@ Google cloudのcloud-functionにGo1.11ランタイムでデプロイする
 
 - `$ go mod init github.com/yhidetoshi/gcloud-function-examples/http-hello`
 
-- `$ gcloud functions deploy Hello --runtime go111 --trigger-http`
+- `$ gcloud functions deploy Hello --entry-point Hello --runtime go111 --trigger-http --project <PROJECTID> --region asia-northeast1`
 
 --> Endpointが出力される
 
-- `$ curl https://us-central1-<GCP_PROJECT_ID>.cloudfunctions.net/Hello`
+- `$ curl https://asia-northeast1-<GCP_PROJECT_ID>.cloudfunctions.net/Hello`
   > Hello World
 
